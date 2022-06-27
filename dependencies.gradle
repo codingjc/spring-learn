@@ -1,0 +1,24 @@
+ext.versions = [                // 定义全部的依赖库版本号
+    spring                          : '6.0.0-M3',      // Spring版本号
+    junit                           : '5.8.2',          // Junit版本编号
+    junitPlatform                   : '1.8.2',          // Junit版本编号
+    slf4j                           : '1.7.36',         // SLF4J日志标准的版本号
+    logback                         : '1.2.11'         // 日志实现标准的版本号
+]
+ext.libraries = [            // 依赖库引入配置
+     // 以下的配置为Spring基础以来支持包
+     'spring-context'                :  "org.springframework:spring-context:${versions.spring}",
+     'spring-core'                   :  "org.springframework:spring-core:${versions.spring}",
+     'spring-context-support'        :  "org.springframework:spring-context-support:${versions.spring}",
+     'spring-beans'                  :  "org.springframework:spring-beans:${versions.spring}",
+     // 以下的配置为JUnit5相关的测试环境依赖
+     'junit-bom'                     : "org.junit:junit-bom:${versions.junit}",
+     'junit-jupiter-api'             : "org.junit.jupiter:junit-jupiter-api:${versions.junit}",
+     'junit-vintage-engine'          : "org.junit.vintage:junit-vintage-engine:${versions.junit}",
+     'junit-jupiter-engine'          : "org.junit.jupiter:junit-jupiter-engine:${versions.junit}",
+     'junit-platform-launcher'       : "org.junit.platform:junit-platform-launcher:${versions.junitPlatform}",
+     'spring-test'                   : "org.springframework:spring-test:${versions.spring}",
+     // 以下的配置为Logback日志组件所需要的依赖库
+     'slf4j-api'                     : "org.slf4j:slf4j-api:${versions.slf4j}",
+     'logback-classic'               : "ch.qos.logback:logback-classic:${versions.logback}"
+]
